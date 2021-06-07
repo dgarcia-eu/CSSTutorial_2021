@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Computational Social Science</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Garcia   TU Graz and Complexity Science Hub Vienna" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="libs/footer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Computational Social Science
+## Studying Human Behavior through Digital Traces
+### David Garcia <br> <em>TU Graz and Complexity Science Hub Vienna</em>
+### Slides vailable at: dgarcia.eu/CSStutorial2021
+
+---
+
+
+
+
+
+
+
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;David Garcia - Computational Social Science Lab - TU Graz + CSH Vienna&lt;/span&gt;&lt;/div&gt; 
+
+---
+class:center
+# About me
+
+.pull-left[
+&lt;img src="figures/Profile.jpg" width="270" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+Website: [dgarcia.eu](https://dgarcia.eu)
+
+Twitter: [@dgarcia_eu](https://twitter.com/dgarcia_eu)
+
+Github: [dgarcia-eu](https://github.com/dgarcia-eu)
+
+Email: garcia@csh.ac.at
+]
+
+Professor for Computational Behavioral and Social Sciences at TU Graz
+&lt;br&gt;Faculty member of the Complexity Science Hub Vienna
+&lt;br&gt;Group leader at the Medical University of Vienna
+&lt;br&gt;Privatdozent at ETH Zurich, teaching Social Data Science
+
+---
+
+# The Computational Social Science Lab
+
+&lt;center&gt;
+&lt;img src="figures/Lab.png" width="650" /&gt;
+
+---
+&lt;center&gt;
+&lt;img src="figures/CSSinfo.png" width="900" /&gt;
+### Our aim is to understand human behavior and socio-technical phenomena in the digital society
+
+---
+
+## *Computational* in Computational Social Science
+It can have three meanings:
+
+- **Digital**&lt;br&gt; 
+Based on large datasets of human behavior, for example produced by the Web and social media
+
+- **Computerized**&lt;br&gt;
+The quantitative analysis of data in an automated, tractable, repeatable, and extensible fashion
+
+- **Generative**&lt;br&gt;
+Application of data and results to design of agent-based models that explain complex social phenomena and motivate interventions
+
+---
+
+
+## Strengths and weaknesses of digital trace data
+
+**Strengths:**
+- Complementary approach to traditional survey and experimental methods
+- Unprecedented scales and granularities
+- Ease of data access, replicability of results
+- Potentially high external validity, behavior in vivo
+
+**Weaknesses:**
+- Limits to internal validity: Lack of counterfactuals hinders causal analysis
+- Self-selection bias: Who talks? Normalization issues: Who is silent?
+- Data gatekeepers, Twitter as a model organism
+- Intractability of black-box predictions and data piñatas
+
+&lt;div style="font-size:15pt"&gt;
+[Sen et al. (2019). A Total Error Framework for Digital Traces of Humans.](https://arxiv.org/abs/1907.08228)&lt;br&gt;
+[Olteanu et al. (2019). Social Data: Biases, Methodological Pitfalls, and Ethical Boundaries.](https://www.frontiersin.org/articles/10.3389/fdata.2019.00013/full)
+
+---
+
+# Avoid making a data piñata
+
+&lt;img src="figures/pinata.png" width="1050" /&gt;
+
+---
+
+
+# Four topics in CSS
+
+&lt;center&gt;
+&lt;img src="figures/Topics.png" width="950" /&gt;
+
+---
+
+# Computational Affective Science
+
+&lt;center&gt;
+&lt;img src="figures/CAS.png" width="950" /&gt;
+
+---
+
+# Computational Affective Science
+
+**Computational Affective Science:** Combining big social data and computational modeling to understand affective life and emotional well-being
+&lt;center&gt;
+Vienna Research Group in Complexity Science funded by the 
+&lt;br&gt;
+Viena Science and Technology Fund  (1.6M Euro)  
+&lt;img src="figures/VRG.png" width="700" /&gt;
+
+---
+
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;
+&lt;a href=https://doi.org/10.1177%2F0956797619831964&gt; Collective Emotions and Social Resilience in the Digital Traces After a Terrorist Attack. David Garcia Bernard Rimé. Psychological Science (2019)&lt;/a&gt;&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+## The Social Function of Collective Emotions
+
+&lt;center&gt;
+&lt;img src="figures/ColectiveEmotions.png" width="900" /&gt;
+&lt;/center&gt;
+
+- **Theory of collective effervescence** (Durkheim, 1912):
+Shared emotions generate social identity, reinforce shared beliefs, and lead to higher solidarity
+
+- **Collective emotions** (von Scheve and Salmela, 2014):   
+Emotional states shared by a large amount of people at the same time
+
+
+---
+
+background-size: 40%
+background-image: url(figures/Trauma.png)
+background-position: 90% 60%
+
+
+## Emotional Responses to Collective Traumas
+
+**How do societies respond to traumatic events?**  
+**Is there a social function of collective emotions?**
+.pull-left[
+- Emotional synchronization: Experience of simultaneous negative emotions
+
+- Collective emotion lasts longer than individual emotional reactions
+
+- Individuals that participate in the collective emotions show higher levels of long-term solidarity ]
+
+---
+
+
+## Twitter Digital Traces after a Terrorist Attack
+
+Focus on Paris Attacks of of Nov 13, 2015  
+Removed bots, news media, and organizations. Final sample of 62,114 users  
+Retrieved historical timeline of users. Total of more than 27 Million tweets (no RT)
+&lt;center&gt;
+&lt;img src="figures/ParisCase.png" width="900" /&gt;
+
+---
+
+## Linguistic Signals
+
+**Linguistic Inquiry and Word Count, LIWC (pronounced “Luke”)**  
+- Simple word matching method  
+- Generated and validated by psychologists (Pennebaker et al., 2001-2015)
+- Multiple classes, calibrated for netspeak and neologisms
+
+
+.pull-left[
+&lt;img src="figures/LIWC.png" width="1000" /&gt;
+]
+.pull-right[
+**LIWC classes in this study:**  
+Positive Affect, Negative Affect  
+Anxiety, Sadness, Anger  
+Social processes  
+Prosocial terms (Frimer, et. al, 2014)  
+French values (libert\*, egalit\*, fraternit\*)
+]
+
+---
+
+
+## Evidence of Collective Emotions
+&lt;center&gt;
+&lt;img src="figures/TS.png" width="750" /&gt;
+&lt;/center&gt;
+
+---
+
+### Collective Dynamics of Social Resilience Indicators
+&lt;center&gt;
+&lt;img src="figures/TS2.png" width="720" /&gt;
+&lt;/center&gt;
+
+
+---
+
+## Emotional Synchronization Effect
+
+.pull-left[
+&lt;center&gt;
+&lt;img src="figures/TS3.png" width="470" /&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+Division of users into two groups based on their emotional expression two weeks after the attacks
+
+Frequency of social process terms:
+- Very similar before the attacks
+- Strong difference after the attacks
+- Difference lasts for months
+
+Similar effect for prosocial terms and shared values terms
+]
+
+---
+## Austrian Emotions on Twitter
+&lt;img src="figures/Dashboard1.png" width="780" style="display: block; margin: auto;" /&gt;
+- Dashboard: https://mpellert.at/covid19_monitor_austria
+- Twitter thread about Vienna attack: https://twitter.com/dgarcia_eu/status/1324097342551842817
+
+---
+
+
+## Conclusions
+
+- Terrorist attacks trigger collective emotions that we can observe online
+
+- Terms related to social resilience increase after collective emotions
+
+- Individuals expressing stronger emotions used on average more terms related to social processes, prosocial behavior, and shared values
+
+- Collective emotions are not just venting, they can keep us together
+
+- Negative effects: inter-group conflict, intolerance, short-term orientation...
+
+- Online interactive visualization at: http://dgarcia.eu/ParisAttacks.html
+
+[**Collective Emotions and Social Resilience in the Digital Traces After a Terrorist Attack.** David Garcia Bernard Rimé. Psychological Science (2019)](https://journals.sagepub.com/doi/full/10.1177/0956797619831964)
+
+---
+
+  
+# Polarization Dynamics
+
+&lt;center&gt;
+&lt;img src="figures/PolDyn.png" width="950" /&gt;
+
+---
+
+## Emergence of polarization in food habits
+
+.pull-left[
+- US Food demand Survey
+
+- Self-reported meat consumption intention over time
+
+- Color: party alignment
+
+- Initial increasing trend for both parties
+
+- Start of alignment with party from 2016: eating meat becomes a political issue
+
+]
+.pull-right[
+
+&lt;img src="figures/Trends.png" width="450" /&gt;
+]
+
+---
+
+## A case of food polarization: the EAT-Lancet report
+
+&lt;img src="figures/eatlancet.png" width="1000" /&gt;
+
+*The first full scientific review of what constitutes a healthy diet from a sustainable food system, and which actions can support and speed up food system transformation. (eatforum.org)*
+
+---
+
+## \#yes2meat: the digital backlash to EAT-Lancet
+
+&lt;img src="figures/yes2meat.png" width="1100" /&gt;
+---
+
+## Twitter data on EAT-Lancet and yes2meat
+
+- List of original tweets that contain “EAT-Lancet” (or similar) or “yes2meat” from Twitter search interface (Dec 2018 - April 2019):
+  - 7281 EAT-Lancet tweets, 8586 yessmeat tweets, 347 tweets mention both
+- Tweet metadata from Twitter API: retweets, links, user profile (4278 users)
+  - User profiles and self-description from Twitter API
+  - Retrieved list of accounts they follow: 4.9 Million follower links
+  - Retrieved timeline up to last (approx)  3200 tweets. 8 Million tweets in total
+  - Analyzed automated behavior with botometer (4,203 users)
+  - 2,376 unique links shared from tweets
+
+- Manual sentiment annotations (Pro EAT-Lancet, Against EAT-Lancet, neutral, irrelevant) for varous samples (top URLS and samples from each community)
+---
+
+class:center
+
+## Time series and URL shares
+
+&lt;img src="figures/TS-eatlancet.png" width="950" /&gt;
+
+---
+
+## Social network analysis
+.pull-left[
+&lt;img src="figures/Net.png" width="500" /&gt;
+]
+.pull-right[
+
+]
+---
+
+## Social network analysis
+.pull-left[
+&lt;img src="figures/Net.png" width="500" /&gt;
+]
+.pull-right[
+&lt;img src="figures/WCblue.png" width="950" /&gt;
+]
+---
+
+## Social network analysis
+.pull-left[
+&lt;img src="figures/Net.png" width="500" /&gt;
+]
+.pull-right[
+&lt;img src="figures/WCred.png" width="950" /&gt;
+]
+---
+
+## Social network analysis
+.pull-left[
+&lt;img src="figures/Net.png" width="500" /&gt;
+]
+.pull-right[
+&lt;img src="figures/WCgreen.png" width="490" /&gt;
+]
+---
+
+## Social network analysis
+.pull-left[
+&lt;img src="figures/Net.png" width="500" /&gt;
+]
+.pull-right[
+&lt;img src="figures/WCyellow.png" width="950" /&gt;
+]
+---
+
+## Retweet changes in yellow community
+.pull-left[
+&lt;img src="figures/Net.png" width="500" /&gt;
+]
+.pull-right[
+&lt;img src="figures/YellowRT.png" width="450" /&gt;
+]
+---
+
+## EAT-Lancet and yes2meat: Summary
+
+- We mapped the digital backlash to EAT-Lancet on Twitter through #yes2meat
+- Birth of #yes2meat preceded the release of the report
+- Four communities: pro-EAT-Lancet, skeptic, pro-yes2meat, and vegan
+- Information flow from pro-yes2meat to skeptic community after report
+- Diet polarization: liberal vegan vs conservative keto
+
+**EATLancet vs yes2meat: the digital backlash to the planetary health diet.**  
+David Garcia, Victor Galaz, Stefan Daume. The Lancet 394(10215) (2019)
+https://doi.org/10.1016/S0140-6736(19)32526-7
+
+---
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;David Garcia - Computational Social Science Lab - TU Graz + CSH Vienna&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Online Inequality
+
+&lt;center&gt;
+&lt;img src="figures/Inequality.png" width="950" /&gt;
+
+---
+class:center
+
+# How can social media affect our society?
+
+.pull-left[
+Opportunities and benefits
+
+&lt;img src="figures/FBmap.png" width="950" /&gt;
+]
+--
+.pull-right[
+Risks and problems
+
+&lt;img src="figures/zuck.png" width="950" /&gt;
+]
+---
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;
+&lt;a href=http://www.pnas.org/content/early/2018/06/12/1717781115&gt; Analyzing gender inequality through large-scale Facebook advertising data. David Garcia et al. Proceedings of the National Academy of Sciences (2018)&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+
+---
+
+
+# Inequality and gender in social media
+
+- The Internet as the Great Potential Equalizer (Hargittai &amp; Hsieh 2013): 
+  - Providing opportunities and  information access to everyone?
+
+- "Unequal distribution of Internet access might exacerbate socioeconomic inequalities."
+&lt;div style="text-align: right"&gt; &lt;em property="italic"&gt; World Bank: World Development Report 2016: Digital Dividends &lt;/em&gt;&lt;/div&gt;
+
+- "One in five female Internet users live in countries where harassment and abuse of women online is extremely unlikely to be punished." 
+&lt;div style="text-align: right"&gt; &lt;em property="italic"&gt; The Web and Rising Global Inequality.  World Wide Web Foundation, 2015 &lt;/em&gt;&lt;/div&gt;
+
+---
+
+## The Facebook Ads API in demographics
+
+&lt;img src="figures/FBAPI.png" width="800" style="display: block; margin: auto;" /&gt;
+- Programmatic Interface to automate marketing campaign in Facebook
+- Audiences can be tuned by demographic attributes (gender, age, income...) or interests (sports, political parties, entertainment...) 
+- Accessible for everyone with a Facebook account - audience metrics for everyone
+- Used in demographics and development research (e.g. [Zagheni, Weber, &amp; Gummadi, 2017;](https://doi.org/10.1111/padr.12102) [Mejova et al., 2018;](https://dl.acm.org/doi/abs/10.1145/3209811.3212698) [Fatehkia, Kashyap, &amp; Weber, 2018](https://www.sciencedirect.com/science/article/pii/S0305750X18300883))
+- Python package to use it: https://github.com/maraujo/pySocialWatcher
+
+---
+
+## The Facebook Gender Divide 
+
+`\(R_{g,c}\)`: Ratio of Facebook active users of gender *g* over all inhabitants of gender *g* in country *c*
+
+&lt;center&gt;
+
+Facebook Gender Divide for country c:  
+&lt;br&gt;$$FGD_c= log\left(\frac{R_{Male,c}}{R_{Female_c}}\right)$$&lt;/center&gt;
+
+Validation with survey data:
+- FGD (217 countries)
+- Global Web Index (34 countries)
+- Pew Internet research (19 countries)
+
+---
+
+## The Facebook Gender Divide across countries
+
+&lt;img src="figures/FGDmap.jpg" width="1100" style="display: block; margin: auto;" /&gt;
+
+---
+
+## The FGD and offline gender inequality
+
+&lt;img src="figures/FGDreg.jpg" width="1100" style="display: block; margin: auto;" /&gt;
+- Regression of FGD rank on WEF gender indices and controls
+- Most explanatory variable: Education Gender Equality
+---
+
+
+## The Facebook Gender Divide: Summary
+
+- Measure of gender divide with FB data comparable to surveys
+- This measure captures offline gender equality indices across countries
+- Temporal correlation between FGD and changes in economic gender eq.
+- Superlinear scaling of FB activity with penetration: positive externality
+
+Social media might also work as a *digital provide*. Is Facebook helping women to find employment in countries with high gender inequality?
+
+For more details:  
+[**Analyzing gender inequality through large-scale Facebook advertising data.** David Garcia, Yonas Mitike Kassa, Angel Cuevas, Manuel Cebrian, Esteban Moro, Iyad Rahwan, and Ruben Cuevas
+Proceedings of the National Academy of Sciences (2018)](http://www.pnas.org/content/early/2018/06/12/1717781115)
+---
+
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;David Garcia - Computational Social Science Lab - TU Graz + CSH Vienna&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Complex Privacy
+
+&lt;center&gt;
+&lt;img src="figures/ComplexPrivacy.png" width="950" /&gt;
+
+---
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;
+&lt;a href=https://advances.sciencemag.org/content/3/8/e1701172.full&gt; Leaking privacy and shadow profiles in online social networks. David Garcia. Science Advances (2017) &lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+
+---
+
+
+background-size: 20%
+background-image: url(figures/puzzle.jpg)
+background-position: 98% 70%
+
+## The Problem of Shadow Profiles
+
+**Facebook Shadow Profile:**  
+A file that Facebook keeps on you containing data it pulls from looking at the information that your friends voluntarily provide. [*(Digital Trends, 2013)*](https://www.digitaltrends.com/social-media/what-exactly-is-a-facebook-shadow-profile/)
+
+- 2011: Europe-vs-Facebook files complaint on shadow profiles
+
+- 2013: Bug reveals private information of 6 million users
+
+- Some users notice their shadow profiles with mobile numbers
+
+- Apr 2014: 1B users of Facebook for mobile share  contact lists
+
+- Aug 2016: Whatsapp and Facebook share information
+
+Not a problem unique to Facebook: also in Twitter, Google, Amazon...
+
+---
+
+## Auditing Shadow Profiles
+
+**Shadow profile hypothesis:**
+The data shared by the users of an online platform predicts of personal information of non-users
+
+&lt;img src="figures/shadowidea.png" width="600" style="display: block; margin: auto;" /&gt;
+**Approach:** historical audit to evaluate how social networking sites could have predicted information of individuals who were not users yet 
+&lt;div style="font-size:15pt"&gt; 
+[One Plus One Makes Three (for Social Networks). Emöke-Ágnes Horvát, Michael Hanselmann, Fred Hamprecht, Katharina Zweig. Plos ONE (2012)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034740)
+
+---
+
+## Study 1: Friendster
+.pull-left[
+&lt;img src="figures/FriendsterLogo.png" width="550" style="display: block; margin: auto;" /&gt;
+- Internet Archive dataset
+- Full track of publicly available data
+- Focus on first 20 million users
+- 3M profiles with public information
+- Profiles contain gender, marital status, and relationship interests
+]
+.pull-right[
+&lt;img src="figures/FriendsterNet.png" width="450" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## Assortativity of sensitive features in Friendster
+
+&lt;img src="figures/Radars.png" width="870" style="display: block; margin: auto;" /&gt;
+---
+
+## Unsupervised prediction based on friends
+
+&lt;br&gt;
+
+&lt;img src="figures/ROCs.png" width="1100" style="display: block; margin: auto;" /&gt;
+
+---
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;
+&lt;a href=https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-018-0130-3&gt; Collective aspects of privacy in the Twitter social network. David Garcia, Mansi Goel, Amod Agrawal, Ponnurangam Kumaraguru. EPJ Data Science (2018)&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+
+---
+
+## Study 2: Location in Twitter
+
+.pull-left[
+&lt;img src="figures/TwitterLocation.png" width="1100" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+- Random sample of 1,017 users
+  - excl. bots, mass media
+- Ego network of reply links
+  - 68,447 alters
+- Timelines: 157M tweets
+- Location from profile text + Google Maps API
+- Tweet metadata to identify users sharing contact lists
+]
+
+---
+
+## Twitter shadow profile test
+
+&lt;img src="figures/TwitterProblem.png" width="1100" style="display: block; margin: auto;" /&gt;
+
+- Data represents a bidirectional social network
+- Joined date of users shows network growth
+- Tweet metadata contains posting app: disclosing users are only those who post at least once from Twitter mobile apps (shared contact lists)
+- Predicting location of users who didn't join yet based on disclosing friends already on Twitter
+---
+
+## Location prediction and heterogeneity
+
+&lt;img src="figures/alters.png" width="1000" style="display: block; margin: auto;" /&gt;
+
+- Location prediction of non-users greatly outperforms null model
+- Individuals with more alters sharing contact lists in Twitter have lower error
+
+---
+
+### Complex privacy: Online privacy as a collective phenomenon
+
+.pull-left[
+- The decision of individuals to share data is mediated by the decisions of others
+- Privacy externalities of the contract between a user and a platform
+- Complex problems, collective solutions: International data cooperatives
+]
+.pull-right[
+&lt;img src="figures/wired.png" width="500" style="display: block; margin: auto;" /&gt;
+]
+&lt;div style="font-size:16pt"&gt; 
+[**Online privacy as a collective phenomenon.** E. Sarigol, D. Garcia, F. Schweitzer. Second ACM Conference on Online Social Networks (COSN) (2014)](https://dl.acm.org/doi/10.1145/2660460.2660470)  
+[**Leaking privacy and shadow profiles in online social networks.** D. Garcia, Science Advances, 3 (8) e1701172 (2017)](https://advances.sciencemag.org/content/3/8/e1701172.full)  
+[**Collective Aspects of Privacy in the Twitter Social Network.** D. Garcia, M. Goel, A. Agrawal, P. Kumaraguru, EPJ Data Science, 7(3) (2018)](https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-018-0130-3)  
+[**Privacy beyond the individual.** D. Garcia. Nature Human Behavior (2019)](https://www.nature.com/articles/s41562-018-0513-2)
+---
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;David Garcia - Computational Social Science Lab - TU Graz + CSH Vienna&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Summary
+
+- Computational Social Science
+  - How digital traces shed a new light to understand society
+- Collective emotions in social media
+  - Twitter emotions after terrorist attacks and social resilience
+- Food polarization dynamics
+  - The Twitter backlash to the EAT-Lancet report as an example
+- Tracking gender inequality with Facebook data
+  - Facebook ads data as a way to compare social media divides
+- The problem of shadow profiles
+  - Intelligent technology and social networks lead to a complex privacy issue
+
+---
+
+
+## TU Graz Master in Computational Social Systems
+
+&lt;img src="figures/CD-MKT-StudMa-Kampagne-CSS-Flyer-A5-an02.png" width="750" style="display: block; margin: auto;" /&gt;
+
+
+**More at: [tugraz.at/go/master-css](tugraz.at/go/master-css)**
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="libs/perc.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
